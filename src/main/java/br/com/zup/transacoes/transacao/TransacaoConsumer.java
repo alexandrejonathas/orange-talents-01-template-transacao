@@ -27,10 +27,7 @@ public class TransacaoConsumer {
 
     @KafkaListener(topics = "${transaction.topic}", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(EventoTransacao eventoTransacao) {
-        System.out.println(eventoTransacao);
-
         Transacao transacao = eventoTransacao.toModel(cartaoRepository, estabelecimentoRepository);
-
         transacaoRepository.save(transacao);
     }
 }

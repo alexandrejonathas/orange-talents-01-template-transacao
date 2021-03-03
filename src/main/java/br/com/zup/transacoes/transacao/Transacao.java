@@ -2,6 +2,7 @@ package br.com.zup.transacoes.transacao;
 
 import br.com.zup.transacoes.cartao.Cartao;
 import br.com.zup.transacoes.estabelecimento.Estabelecimento;
+import br.com.zup.transacoes.estabelecimento.EventoEstabelecimento;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -48,4 +49,15 @@ public class Transacao {
                 '}';
     }
 
+    public LocalDateTime getEfetivadaEm() {
+        return efetivadaEm;
+    }
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
 }

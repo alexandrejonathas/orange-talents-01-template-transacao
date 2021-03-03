@@ -35,4 +35,7 @@ public class Estabelecimento {
                 '}';
     }
 
+    public String getNome() {
+        return nome;
+    }
 }
